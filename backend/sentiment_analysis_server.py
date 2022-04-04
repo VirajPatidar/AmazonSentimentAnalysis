@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import json
 from tensorflow.keras.preprocessing.text import tokenizer_from_json
-
+import datetime
 
 app = FastAPI()
 # loading model and tokenizer
@@ -42,7 +42,9 @@ async def return_sentiment(sentiment: Sentiment):
     print(prob[0][0])
     return {
         "status": "OK", 
-        "probability": float(prob[0][0]) 
+        "probability": float(prob[0][0]),
+        "sentiment": int(float(prob[0][0]) * 100 / 20) + 1,
+        "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
 @app.get('/ping/')
