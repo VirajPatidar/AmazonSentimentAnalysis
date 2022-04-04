@@ -9,8 +9,19 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import json
 from tensorflow.keras.preprocessing.text import tokenizer_from_json
 import datetime
+from fastapi.middleware.cors import CORSMiddleware
+
+origins = ["*"]
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # loading model and tokenizer
 model = load_model('sentiment_analysis')
 with open('tokenizer.json') as f:
