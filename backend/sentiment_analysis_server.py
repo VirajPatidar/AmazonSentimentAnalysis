@@ -11,7 +11,7 @@ from tensorflow.keras.preprocessing.text import tokenizer_from_json
 import datetime
 from fastapi.middleware.cors import CORSMiddleware
 
-origins = ["*"]
+origins = ["https://product-sentiment-analysis.netlify.app/", "http://localhost:3000/"]
 
 app = FastAPI()
 app.add_middleware(
