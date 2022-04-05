@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import ReviewRating from './ReviewRating';
 
 // MUI
 import Box from '@mui/material/Box';
@@ -88,9 +89,18 @@ function App() {
                     </Box>
                     {result ?
                         <Box mt={3}>
-                            sentiment: {result.sentiment}
-                            <br />
-                            probability: {result.probability}
+                            <Box my={6} sx={{textAlign: "center"}}>
+                                <ReviewRating val={result.sentiment} />
+                            </Box>
+                            <Typography variant="body1" gutterBottom>
+                                Sentiment Value (1 to 5): {result.sentiment}
+                            </Typography>
+                            <Typography variant="body1" gutterBottom>
+                                Probability of review being a positive sentiment: {(result.probability * 100).toFixed(2)} %
+                            </Typography>
+                            <Typography variant="body1" gutterBottom>
+                                Server Response Timestamp: {result.timestamp}
+                            </Typography>
                         </Box>
                         : null
                     }
