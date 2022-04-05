@@ -20,6 +20,8 @@ function App() {
     const [loading, setLoading] = useState(false)
     const [result, setResult] = useState(null)
 
+    const sentiments = ["Very Bad", "Bad", "OK", "Good", "Very Good"]
+
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -93,13 +95,16 @@ function App() {
                                 <ReviewRating val={result.sentiment} />
                             </Box>
                             <Typography variant="body1" gutterBottom>
-                                Sentiment Value (1 to 5): {result.sentiment}
+                                <strong> Sentiment :</strong> {sentiments[result.sentiment - 1]}
                             </Typography>
                             <Typography variant="body1" gutterBottom>
-                                Probability of review being a positive sentiment: {(result.probability * 100).toFixed(2)} %
+                                <strong> Sentiment Value (1 to 5):</strong> {result.sentiment}
                             </Typography>
                             <Typography variant="body1" gutterBottom>
-                                Server Response Timestamp: {result.timestamp}
+                                <strong> Probability of review being a positive sentiment:</strong> {(result.probability * 100).toFixed(2)} %
+                            </Typography>
+                            <Typography variant="body1" gutterBottom>
+                                <strong> Server Response Timestamp:</strong> {result.timestamp}
                             </Typography>
                         </Box>
                         : null

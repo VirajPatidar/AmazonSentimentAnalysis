@@ -9,23 +9,23 @@ import SentimentVerySatisfiedTwoToneIcon from '@mui/icons-material/SentimentVery
 
 const customIcons = {
     1: {
-        icon: <SentimentVeryDissatisfiedTwoToneIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentVeryDissatisfiedTwoToneIcon sx={{ fontSize: '8vw' }} />,
         label: 'Very Dissatisfied',
     },
     2: {
-        icon: <SentimentDissatisfiedTwoToneIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentDissatisfiedTwoToneIcon sx={{ fontSize: '8vw' }} />,
         label: 'Dissatisfied',
     },
     3: {
-        icon: <SentimentNeutralTwoToneIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentNeutralTwoToneIcon sx={{ fontSize: '8vw' }} />,
         label: 'Neutral',
     },
     4: {
-        icon: <SentimentSatisfiedTwoToneIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentSatisfiedTwoToneIcon sx={{ fontSize: '8vw' }} />,
         label: 'Satisfied',
     },
     5: {
-        icon: <SentimentVerySatisfiedTwoToneIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentVerySatisfiedTwoToneIcon sx={{ fontSize: '8vw' }} />,
         label: 'Very Satisfied',
     },
 };
