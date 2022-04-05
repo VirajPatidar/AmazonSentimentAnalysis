@@ -26,7 +26,7 @@ function App() {
         let submit = true;
         setTextError(false);
 
-        if (text === "") {
+        if (text === "" || text.trim().split(/\s+/).length > 100) {
             submit = false;
             setTextError(true);
         }
