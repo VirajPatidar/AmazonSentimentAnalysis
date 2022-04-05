@@ -1,31 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Rating from '@mui/material/Rating';
-import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
-import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
-import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
-import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined';
-import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
+import SentimentVeryDissatisfiedTwoToneIcon from '@mui/icons-material/SentimentVeryDissatisfiedTwoTone';
+import SentimentDissatisfiedTwoToneIcon from '@mui/icons-material/SentimentDissatisfiedTwoTone';
+import SentimentNeutralTwoToneIcon from '@mui/icons-material/SentimentNeutralTwoTone';
+import SentimentSatisfiedTwoToneIcon from '@mui/icons-material/SentimentSatisfiedTwoTone';
+import SentimentVerySatisfiedTwoToneIcon from '@mui/icons-material/SentimentVerySatisfiedTwoTone';
 
 const customIcons = {
     1: {
-        icon: <SentimentVeryDissatisfiedIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentVeryDissatisfiedTwoToneIcon sx={{ fontSize: 100 }} />,
         label: 'Very Dissatisfied',
     },
     2: {
-        icon: <SentimentDissatisfiedIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentDissatisfiedTwoToneIcon sx={{ fontSize: 100 }} />,
         label: 'Dissatisfied',
     },
     3: {
-        icon: <SentimentSatisfiedIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentNeutralTwoToneIcon sx={{ fontSize: 100 }} />,
         label: 'Neutral',
     },
     4: {
-        icon: <SentimentSatisfiedAltIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentSatisfiedTwoToneIcon sx={{ fontSize: 100 }} />,
         label: 'Satisfied',
     },
     5: {
-        icon: <SentimentVerySatisfiedIcon sx={{ fontSize: 100 }} />,
+        icon: <SentimentVerySatisfiedTwoToneIcon sx={{ fontSize: 100 }} />,
         label: 'Very Satisfied',
     },
 };
