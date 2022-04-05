@@ -39,13 +39,10 @@ function App() {
             axios.post(`https://amazon-sentiments-analysis.herokuapp.com/api/get_sentiment/`, { 'message': text })
                 .then((res) => {
                     setLoading(false);
-                    console.log(res);
                     setResult(res.data);
-                    alert(JSON.stringify(res.data));
                     // window.location.reload();
                 })
                 .catch(err => {
-                    console.log(err);
                     setLoading(false);
                     alert("An error occured! Please try again.")
                 });
