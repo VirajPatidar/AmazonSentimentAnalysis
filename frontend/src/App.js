@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 // MUI
 import Box from '@mui/material/Box';
@@ -51,6 +52,7 @@ function App() {
 
     return (
         <>
+            <Navbar />
             <Grid container justifyContent="center" alignItems="center">
                 <Grid item xs={12} sm={8} md={5} mt={8} p={2}>
                     <Typography variant="h5">
