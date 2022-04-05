@@ -36,7 +36,7 @@ function App() {
 
         if (submit) {
             setLoading(true);
-            axios.post(`http://127.0.0.1:8000/api/get_sentiment/`, { 'message': text })
+            axios.post(`https://amazon-sentiments-analysis.herokuapp.com/api/get_sentiment/`, { 'message': text })
                 .then((res) => {
                     setLoading(false);
                     console.log(res);
