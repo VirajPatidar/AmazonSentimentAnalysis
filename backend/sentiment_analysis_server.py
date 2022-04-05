@@ -39,10 +39,10 @@ class Sentiment(BaseModel):
 @app.post("/api/get_sentiment/")
 async def return_sentiment(sentiment: Sentiment):
     # text message should be less than 100 characters
-    if len(sentiment.message) > 100:
+    if len(sentiment.message.split()) > 100:
         return {
             "status": "Forbidden",
-            "data": "Sentence should be less than 100 characters" 
+            "data": "Sentence should be less than 100 words" 
         }
     test_this = [sentiment.message]
     print(f"this is the test input: {test_this}")
